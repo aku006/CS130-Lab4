@@ -1,4 +1,5 @@
 #include <GL/glew.h>
+#include <stdio.h>
 #include "application.h"
 
 using namespace std;
@@ -42,6 +43,7 @@ GLuint loadShader(const char *vertexfilename, const char *fragmentfilename) {
   // TODO: Functions you should know to implement this
   // glCreateShader
   //program = glCreateProgram();
+  program = glCreateProgram();
   GLuint vertex_id = glCreateShader(GL_VERTEX_SHADER);
   GLuint fragment_id = glCreateShader(GL_FRAGMENT_SHADER);
   // glShaderSource
@@ -59,7 +61,7 @@ GLuint loadShader(const char *vertexfilename, const char *fragmentfilename) {
   glAttachShader(program, vertex_id);
   glAttachShader(program, fragment_id);
   // glCreateProgram
-  program = glCreateProgram();
+  //program = glCreateProgram();
   // glLinkProgram
   glLinkProgram(program);
   // http:// www.opengl.org/sdk/docs/man/
